@@ -1,0 +1,27 @@
+\reversemarginpar
+\newcommand{\MarginDate}[1]{\marginpar{\raggedleft\itshape\small#1}}
+
+\usepackage[latin1]{inputenc}	% la codifica di input
+\usepackage[T1]{fontenc}	% la codifica dei font
+
+\usepackage[LabelsAligned, NoDate]{currvita}	% un buon pacchetto per CV
+\usepackage[nochapters]{classicthesis} % stile ClassicThesis
+\usepackage{url}	% per gli indirizzi Internet
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}}
+\renewcommand{\cvlistheadingfont}{\large}
+\renewcommand{\cvlabelfont}{\qquad}
+
+\usepackage{hyperref}		
+\hypersetup{colorlinks,breaklinks,
+			urlcolor=Maroon, 
+			linkcolor=Maroon}
+\usepackage{eurosym}
+
+\newlength{\datebox}\settowidth{\datebox}{Summer 2010}
+
+\newcommand{\NewWorkExperience}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\textit{#1}}\hspace{1.5em} #2 #3%
+\vspace{0.5em}}
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize}
+\newcommand{\Sep}{\vspace{2em}}
